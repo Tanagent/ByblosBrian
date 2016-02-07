@@ -1,17 +1,15 @@
 package com.example.brian.byblos;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 /**
  * Created by Brian on 2/6/2016.
  */
-public class ViewPagerActivity extends AppCompatActivity{
+public class CreditCard extends Activity {
 
     private Button backBtn;
     private Button nextBtn;
@@ -19,26 +17,25 @@ public class ViewPagerActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.activity_crime_pager);
-        ViewPager viewPager = (ViewPager) findViewById(R.id.activity_crime_view_pager);
-        viewPager.setAdapter(new MyViewPagerAdapter(this));
+        this.setContentView(R.layout.credit_card);
 
-        backBtn = (Button) findViewById(R.id.back3);
+        backBtn = (Button) findViewById(R.id.back5);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewPagerActivity.this, ProfilePic.class);
+                Intent intent = new Intent(CreditCard.this, AccountSetup.class);
                 startActivity(intent);
             }
         });
 
-        nextBtn = (Button) findViewById(R.id.next3);
+        nextBtn = (Button) findViewById(R.id.back5);
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewPagerActivity.this, Camera.class);
+                Intent intent = new Intent(CreditCard.this, ProfilePic.class);
                 startActivity(intent);
             }
         });
+
     }
 }

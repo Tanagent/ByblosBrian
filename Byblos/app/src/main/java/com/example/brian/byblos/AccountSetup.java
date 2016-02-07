@@ -34,7 +34,7 @@ public class AccountSetup extends Activity {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountSetup.this, ProfilePic.class);
+                Intent intent = new Intent(AccountSetup.this, CreditCard.class);
                 startActivity(intent);
             }
         });
