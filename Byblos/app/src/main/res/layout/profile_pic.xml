@@ -52,6 +52,7 @@
             android:layout_below="@id/tap_screen"/>
 
         <Button
+            android:id="@+id/upload_photo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="UPLOAD PHOTO"
@@ -64,12 +65,14 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/back2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back"
             android:layout_alignParentBottom="true"/>
 
         <Button
+            android:id="@+id/next2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next >"

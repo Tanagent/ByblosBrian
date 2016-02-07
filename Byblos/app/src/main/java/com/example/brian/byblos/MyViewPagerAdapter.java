@@ -13,6 +13,8 @@ public class MyViewPagerAdapter extends PagerAdapter {
 
     private Context context;
     private int[] imageResIds = {
+            R.drawable.cat,
+            R.drawable.cat,
             R.drawable.cat
     };
 

@@ -26,6 +26,18 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Re-Enter Password"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="Age"
         android:inputType="number"/>
 
@@ -59,12 +71,14 @@
         android:layout_height="match_parent">
 
         <Button
+            android:id="@+id/back1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Back"
             android:layout_alignParentBottom="true"/>
 
         <Button
+            android:id="@+id/next1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Next >"

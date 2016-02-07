@@ -4,37 +4,45 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
+import android.widget.Toast;
 
 /**
  * Created by Brian on 2/6/2016.
  */
-public class AccountSetup extends Activity {
+public class ProfilePic extends Activity {
 
+    private Button uploadBtn;
     private Button backBtn;
     private Button nextBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.account_setup);
+        this.setContentView(R.layout.profile_pic);
 
-        backBtn = (Button) findViewById(R.id.back1);
+        uploadBtn = (Button) findViewById(R.id.upload_photo);
+        uploadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ProfilePic.this, "Uploading...", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        backBtn = (Button) findViewById(R.id.back2);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountSetup.this, MainActivity.class);
+                Intent intent = new Intent(ProfilePic.this, AccountSetup.class);
                 startActivity(intent);
             }
         });
 
-        nextBtn = (Button) findViewById(R.id.next1);
+        nextBtn = (Button) findViewById(R.id.next2);
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountSetup.this, ProfilePic.class);
+                Intent intent = new Intent(ProfilePic.this, ViewPagerActivity.class);
                 startActivity(intent);
             }
         });
