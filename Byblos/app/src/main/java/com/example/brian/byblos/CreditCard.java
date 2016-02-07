@@ -28,7 +28,7 @@ public class CreditCard extends Activity {
             }
         });
 
-        nextBtn = (Button) findViewById(R.id.back5);
+        nextBtn = (Button) findViewById(R.id.next5);
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
